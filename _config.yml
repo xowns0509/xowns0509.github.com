@@ -1,52 +1,118 @@
-locale: "en-US"
-title: Strata # Title of your site
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/
-google_analytics_key: ""
+# -----------------------------------------------------------------------------
+#  User configuration
+# -----------------------------------------------------------------------------
 
-# Default description in social shares for the jekyll-seo-tag gem
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title:               Hydejack
 
-# Author details for the jekyll-seo-tag gem
+# The unique resource location of your page.
+# Set to `https://<username>.github.io` when hosting on GitHub Pages (and not using custom domains!)
+url:                 https://qwtel.com
+
+# Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
+# Set to '/<reponame>' when using the `gh-pages` branch of a repository
+baseurl:             /hydejack
+
+# A very short description  of your page
+tagline:             A pretentious two-column Jekyll theme.
+
+# A longer description of the page, used in the sidebar and as fallback for the meta description tag.
+# Markdown enabled, however don't use more than one paragraph (enforced by `>`)
+description:         >
+  A pretentious two-column [Jekyll](http://jekyllrb.com/) theme, stolen by
+  [`@qwtel`{:rel="me"}](https://twitter.com/qwtel) from
+  [Hyde](http://hyde.getpoole.com).
+  You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
+
+# This should be the same author as first in `_data/authors.yml`
 author:
-  name: TaeJoon Eom
-  email: xowns0509@nate.com
-  twitter: # twitter username without the @ symbol
+  name:              Florian Klampfer
+  email:             f.klampfer@gmail.com
 
-# Social details for the jekyll-seo-tag gem
-social:
-  name: Strata Reloaded Template
-  links:
-    - https://github.com/comfusion/strata-reloaded-jekyll-template
+# Fallback image and color if not overwritten
+image:               /hydejack/assets/img/nap.jpg
+color:               '#A85641'
 
-permalink: pretty
+# Remove to disable Google Fonts
+google_fonts:        Roboto+Slab:700|Noto+Serif:400,400i,700,700i
+font_heading:        "'Roboto Slab', Helvetica, Arial, sans-serif"
+font:                "'Noto Serif', Georgia, serif"
+
+# Remove to disable Google Anaylics
+google_analytics:    UA-84025722-2
+
+# Setting a disqus shortname will enable the comment section on pages
+# that have `comments: true` in the front matter
+disqus_shortname:    qwtel
+
+# This text will appear in the footer of every page. Markdown enabled.
+copyright:           '&copy; 2017. All rights reserved.'
+
+# Set to true when building locally with the `--lsi` option
+# See: https://jekyllrb.com/docs/variables/#site-variables, `site.related_posts`
+use_lsi:             false
+
+# Set to `true` if you don't want to show an icon after each link that opens to an external site
+no_mark_external:    false
+
+# Format of the permalinks
+permalink:           pretty
+
+# Pagination configuration (used by the `blog` layout)
+paginate:            5
+paginate_path:       '/page-:num/'
+
+# If you are updating form a previous verison of Hydejack, uncomment the two lines below,
+# so that existing subscribers to your feed continue to receive updates.
+# feed:
+#   path:              atom.xml
+
+# -----------------------------------------------------------------------------
+#  Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  featured_categories:
+    permalink:       /category/:name/
+    output:          true
+  featured_tags:
+    permalink:       /tag/:name/
+    output:          true
+  projects:
+    permalink:       /projects/:path/
+    output:          true
+
+# -----------------------------------------------------------------------------
+#  Advanced configuration
+# -----------------------------------------------------------------------------
 
 gems:
-  - "jekyll-feed"
-  - "jekyll-seo-tag"
-  - "jekyll-paginate"
-  - "jekyll-sitemap"
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
 
-# Jekyll SEO Tag
-webmaster_verifications:
-  google: # 1234
-  bing: # 1234
-  alexa: # 1234
-  yandex: # 1234
+exclude:
+  - README.md
+  - LICENSE.md
+  - node_modules
+  - package.json
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-hydejack.gemspec
 
-# -----------
-# CloudCannon
+kramdown:
+  footnote_backlink: '&#x21a9;&#xfe0e;'
+  math_engine:       mathjax
+  math_engine_opts:
+    preview:         true
+    preview_as_code: true
 
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
+compress_html:
+  comments:          ["<!-- ", " -->"]
+  clippings:         all
+  endings:           all
+  ignore:
+    envs:            [development]
+
+sass:
+  style:             compressed
