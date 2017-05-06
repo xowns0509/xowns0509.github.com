@@ -10,6 +10,7 @@ url:                 https://qwtel.com
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
+# baseurl:             /hydejack
 baseurl:             /hydejack
 
 # A very short description  of your page
@@ -25,8 +26,8 @@ description:         >
 
 # This should be the same author as first in `_data/authors.yml`
 author:
-  name:              Florian Klampfer
-  email:             f.klampfer@gmail.com
+  name:              xowns0509
+  email:             xowns0509@gmail.com
 
 # Fallback image and color if not overwritten
 image:               /hydejack/assets/img/nap.jpg
@@ -38,7 +39,7 @@ font_heading:        "'Roboto Slab', Helvetica, Arial, sans-serif"
 font:                "'Noto Serif', Georgia, serif"
 
 # Remove to disable Google Anaylics
-google_analytics:    UA-84025722-2
+# google_analytics:    UA-84025722-2
 
 # Setting a disqus shortname will enable the comment section on pages
 # that have `comments: true` in the front matter
