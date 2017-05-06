@@ -11,7 +11,7 @@ url:                 https://qwtel.com
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
 # baseurl:             /hydejack
-baseurl:             /hydejack
+baseurl:
 
 # A very short description  of your page
 tagline:             A pretentious two-column Jekyll theme.
@@ -31,7 +31,7 @@ author:
 
 # Fallback image and color if not overwritten
 image:               /hydejack/assets/img/nap.jpg
-color:               '#A85641'
+color:               '#1cfffb'
 
 # Remove to disable Google Fonts
 google_fonts:        Roboto+Slab:700|Noto+Serif:400,400i,700,700i
