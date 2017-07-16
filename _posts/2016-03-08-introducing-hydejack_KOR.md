@@ -1,36 +1,35 @@
 ---
 layout: post
-title: 세 번째 글
+title: Introducing Hydejack
 tags: [hydejack]
 description: >
-  첫 번째 글의 영어내용을 일부 한글로 번역해 봄.
+  Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 
 ---
 
-** 별 2개. This post is outdated and only included for legacy reasons.
+**This post is outdated and only included for legacy reasons.
 See the [Documentation]({{ site.baseurl }}{% link docs/6.0.0/index.md %}){:.heading data-flip="title"} for up-to-date instructions.**
 
 ***
 
-## 특징
+## Features
 Unlike Hyde, it's very opinionated about how you are going to use it.
 
 Features include:
 
-* 리스트를 만들려면 별(아스테릭) 1개
-* 터치 가능한 사이드바 / 모바일에선 서랍형, including fallback when JS is disabled
+* Touch-enabled sidebar / drawer for mobile, including fallback when JS is disabled.
 * Github Pages compatible tag support based on [this post][tag].
-* 조정가능한 링크색상과 사이드바 이미지, 사이트 마다, 태그 마다, 포스트 마다
-* 포스트의 하단에 위치한 선택적 저자섹션
-* 선택적 댓글 섹션 powered by Disqus.
-* 년도별 포스트 레이아웃
-* 사이드바에 위치한 Wide array of 소셜미디어 아이콘
+* Customizable link color and sidebar image, per-site, per-tag and per-post.
+* Optional author section at the bottom of each post.
+* Optional comment section powered by Disqus.
+* Layout for posts grouped by year
+* Wide array of social media icons on sidebar.
 * Math blocks via [KaTeX](https://khan.github.io/KaTeX/).
 
-## 다운로드
+## Download
 Hydejack is developed on and hosted with GitHub. Head to the [GitHub repository](https://github.com/qwtel/hydejack) for downloads, bug reports, and feature requests.
 
-## 사이드바
+## Sidebar
 I love the original Hyde theme, but unfortunately the layout isn't as great on small screens.
 Since the sidebar moves to the top, the user has to scroll down just to read the title of a blog post.
 
@@ -38,9 +37,9 @@ By using a drawer component I was able to retain the original two column layout.
 
 Since the background image contributes to the feel of the page I'm letting it peek over the edge a bit. This also provides a hint to the user that an interaction is possible.
 
-## 설명서
+## Manual
 
-### 설정하기
+### Configuration
 You can configure important aspects of the theme via [`_config.yml`](https://github.com/qwtel/hydejack/blob/v3/_config.yml). This includes:
 
 * the blog description in the sidebar
@@ -48,7 +47,7 @@ You can configure important aspects of the theme via [`_config.yml`](https://git
 * default image and link color of the blog
 * the github and twitter usernames
 
-### 포스트의 색상과 이미지 바꾸는 방법
+### How to Change the Image and Color of a Post
 In the manifest of a blog post, simply add an url as `image` and a CSS color as `color`:
 
 ~~~yml
@@ -56,11 +55,9 @@ layout: post
 title: Introducing Hydejack
 image: https://qwtel.com/hydejack/assets/img/hyde.jpg
 color: '#949667'
-
-물결 셋
 ~~~
 
-### 태그 추가하기
+### How to Add a New Tag
 Tags are not meant to be used #instagram #style: #food #goodfood #happy #happylife #didimentionfood #yougetthepoint, as each tag requires some setup work. I tend to think of it as categories that can be combined.
 
 1.  Add an entry to `_data/tags.yml`, where the key represents a slug and provide at least a `name` value and optionally `image`, `color` and `description`.
