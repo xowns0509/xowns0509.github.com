@@ -7,9 +7,6 @@ description: >
 
 ---
 
-**This post is outdated and only included for legacy reasons.
-See the [Documentation]({{ site.baseurl }}{% link docs/6.0.0/index.md %}){:.heading data-flip="title"} for up-to-date instructions.**
-
 ***
 
 ## 특징
